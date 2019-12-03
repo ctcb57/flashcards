@@ -20,9 +20,7 @@ class CardsContainer extends React.Component{
             <div className="ui rasied very padded text container segment">
                 <div className="ui grid">
                     <div className="six wide column">
-                        {collections.map(({ id, ...otherCollectionProps }) => (
-                            <CardsList key={id} {...otherCollectionProps} />
-                        ))}
+                        <CardsList collections={collections}/>
                     </div>
                     <div className="ten wide column">
                         <ActiveCard />
