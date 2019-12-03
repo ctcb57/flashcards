@@ -1,5 +1,6 @@
 .ui.rasied.very.padded.text.container.segment{
     background: lightblue;
+    width: 100%;
 }
 
 p{
