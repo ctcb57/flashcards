@@ -1,12 +1,11 @@
 import React from 'react';
 import './collection-card.styles.css';
 
-function CollectionCard(){
-    return(
-        <div className="card">
-            <p>Card One</p>
-        </div>
-    );
-}
+const CollectionCard = (title) => (
+    <div className="card">
+        <p>{title}</p>
+    </div>
+);
+
 
 export default CollectionCard;
