@@ -1,0 +1,8 @@
+#collectionCard{
+    background-color: yellow;
+}
+
+#collectionCard:hover{
+    background-color: orange;
+    cursor: pointer;
+}

@@ -4,6 +4,8 @@ import './cards-list.styles.css';
 
 const CardsList = props => {
     // console.log(props);
-    return <CollectionCard key={props} id={props.collections}/>
+    return <div className="ui one stackable cards">
+        <CollectionCard key={props} id={props.collections}/>
+    </div>
 }
 export default CardsList;
