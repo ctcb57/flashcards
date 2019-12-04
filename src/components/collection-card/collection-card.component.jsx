@@ -1,20 +1,15 @@
 import React from 'react';
 import './collection-card.styles.css';
 
-const CollectionCard = props =>{
-    const collections = props.id;
-    const titles = collections.map((title) => {
-        return(
-            <div className="ui card" key={title.id} id="collectionCard">
-                <div className="content">
-                    <div className="header">{title.title}</div>
-                </div>
-            </div>
-        ) ;
-    });
+const CollectionCard = ({ collection, setActiveCollection }) =>{
+    console.log(collection);
     return(
-        <div>{titles}</div>
-    );
+        <div onClick={() => setActiveCollection(collection)} className="ui card" id="collectionCard">
+            <div className="content">
+                <div className="header">{collection.title}</div>
+            </div>
+        </div>
+    )
 }
 
 export default CollectionCard;

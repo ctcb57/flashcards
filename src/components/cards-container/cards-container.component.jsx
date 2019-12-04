@@ -11,26 +11,36 @@ class CardsContainer extends React.Component{
         super();
 
         this.state={
-            collections: DATA
+            collections: DATA,
+            activeCard: [],
+            currentCard: 0,
+            totalCards: 0
         }
     }
 
+    setActiveCollection = collection => {
+        this.setState({ activeCard: collection })
+    }
+
     render(){
-        const {collections} = this.state;
+        const {collections, activeCard, currentCard, totalCards} = this.state;
         return(
             <div className="ui rasied very padded text container segment">
                 <div className="ui grid">
                     <div className="six wide column">
-                        <CardsList collections={collections}/>
+                        <CardsList 
+                            collections={collections} 
+                            setActiveCollection={this.setActiveCollection}
+                        />
                     </div>
                     <div className="ten wide column">
-                        <ActiveCard />
+                        <ActiveCard activeCard={activeCard}/>
                     </div>
                     <div className="six wide column"></div>
                     <div className="four wide column">
                         <CustomButton />
                     </div>
-                    <div className="two wide column"> # / # </div>
+                    <div className="two wide column"> {currentCard} / {totalCards} </div>
                     <div className="four wide column">
                         <CustomButton />
                     </div>
