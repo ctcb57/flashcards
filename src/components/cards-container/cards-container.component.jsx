@@ -19,11 +19,16 @@ class CardsContainer extends React.Component{
     }
 
     setActiveCollection = collection => {
-        this.setState({ activeCard: collection })
+        this.setState({ 
+            activeCard: [collection.items[0].term, collection.items[0].definition],
+            currentCard: collection.items[0].id,
+            totalCards: collection.items.length
+         })
     }
 
     render(){
         const {collections, activeCard, currentCard, totalCards} = this.state;
+        console.log(activeCard);
         return(
             <div className="ui rasied very padded text container segment">
                 <div className="ui grid">

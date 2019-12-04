@@ -6,9 +6,9 @@ const CardsList = ({ collections, setActiveCollection }) => {
     const collectionList = collections.map((collection) => {
         return(
             <CollectionCard
-                key={collections.id}
                 setActiveCollection={setActiveCollection}
                 collection={collection}
+                key={collection.id}
             />
         );
     });

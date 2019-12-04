@@ -2,7 +2,6 @@ import React from 'react';
 import './collection-card.styles.css';
 
 const CollectionCard = ({ collection, setActiveCollection }) =>{
-    console.log(collection);
     return(
         <div onClick={() => setActiveCollection(collection)} className="ui card" id="collectionCard">
             <div className="content">
