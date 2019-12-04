@@ -1,0 +1,9 @@
+.custom-button{
+    width: auto;
+    background-color: red;
+}
+
+.custom-button:hover{
+    background-color: green;
+    cursor: pointer;
+}
