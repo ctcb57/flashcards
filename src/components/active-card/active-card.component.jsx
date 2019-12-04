@@ -7,7 +7,7 @@ const ActiveCard = ({ activeCard }) => {
            <div className="content">
                <div className="center aligned header">{activeCard[0]}</div>
                <div className="center aligned description">
-                   <p>{activeCard[1]}</p>
+                   <p>{activeCard[0]}</p>
                </div>
            </div>
        </div>
